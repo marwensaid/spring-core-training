@@ -1,12 +1,7 @@
-## Simplifiez le développement d'applications Java avec Spring
+## Spring-Core Training
 
-Ceci est le dépôt associé au cours
-[_Simplifiez le développement d'applications Java avec Spring_](https://openclassrooms.com/courses/simplifiez-le-developpement-dapplications-java-avec-spring)
-sur [_OpenClassrooms_](https://www.openclassrooms.com).
+### Content
 
-
-### Contenu
-
--   `db` : les éléments de création de la base de données _DB_TICKET_
--   `docker` : les éléments docker/docker-compose pour monter un environnement de développement avec [docker](https://www.docker.com)
--   `ticket` : les sources du projet de gestion de tickets
+-   `db` : Element to create database _DB_TICKET_
+-   `docker` : The docker/docker-compose to build developement env [docker](https://www.docker.com)
+-   `ticket` : Project source code
