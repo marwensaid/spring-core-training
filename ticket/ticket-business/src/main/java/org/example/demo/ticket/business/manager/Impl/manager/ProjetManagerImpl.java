@@ -1,9 +1,10 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.manager.Impl.manager;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.example.demo.ticket.business.manager.contract.manager.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
