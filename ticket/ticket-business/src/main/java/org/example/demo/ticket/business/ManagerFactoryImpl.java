@@ -1,15 +1,42 @@
 package org.example.demo.ticket.business;
 
-import org.example.demo.ticket.business.manager.ProjetManager;
-import org.example.demo.ticket.business.manager.TicketManager;
+import org.example.demo.ticket.business.manager.ProjetManagerImpl;
+import org.example.demo.ticket.business.manager.TicketManagerImpl;
 
-public interface ManagerFactoryImpl {
+public class ManagerFactoryImpl implements ManagerFactory {
 
-    ProjetManager getProjetManager();
 
-    void setProjetManager(ProjetManager pProjectManager);
+    private static final ManagerFactoryImpl INSTANCE = new ManagerFactoryImpl();
 
-    TicketManager getTicketManager();
+    private ProjetManagerImpl projetManager;
 
-    void setTicketManager(TicketManager pTicketManager);
+    private TicketManagerImpl ticketManager;
+
+    private ManagerFactoryImpl() {
+        super();
+    }
+
+    public static ManagerFactoryImpl getInstance() {
+        return ManagerFactoryImpl.INSTANCE;
+    }
+
+    @Override
+    public ProjetManagerImpl getProjetManager() {
+        return projetManager;
+    }
+
+    @Override
+    public void setProjetManager(ProjetManagerImpl pProjectManager) {
+        projetManager = pProjectManager;
+    }
+
+    @Override
+    public TicketManagerImpl getTicketManager() {
+        return ticketManager;
+    }
+
+    @Override
+    public void setTicketManager(TicketManagerImpl pTicketManager) {
+        ticketManager = pTicketManager;
+    }
 }
