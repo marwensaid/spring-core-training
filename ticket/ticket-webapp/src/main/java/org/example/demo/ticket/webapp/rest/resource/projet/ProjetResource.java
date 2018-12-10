@@ -8,7 +8,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.example.demo.ticket.business.ManagerFactory;
-import org.example.demo.ticket.business.manager.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
@@ -46,7 +45,7 @@ public class ProjetResource {
      */
     @GET
     public List<Projet> get() {
-        ProjetManager vProjetManager = new ProjetManager();
+        ProjetManagerImpl vProjetManager = new ProjetManagerImpl();
         List<Projet> vListProjet = vProjetManager.getListProjet();
         return vListProjet;
     }
