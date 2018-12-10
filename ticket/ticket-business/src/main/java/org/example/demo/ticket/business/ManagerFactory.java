@@ -7,7 +7,7 @@ public class ManagerFactory {
 
     private static final ManagerFactory INSTANCE = new ManagerFactory();
 
-    private ManagerFactory() {
+    public ManagerFactory() {
         super();
     }
 
