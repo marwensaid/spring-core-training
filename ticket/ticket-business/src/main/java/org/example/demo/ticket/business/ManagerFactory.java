@@ -1,7 +1,7 @@
 package org.example.demo.ticket.business;
 
-import org.example.demo.ticket.business.manager.ProjetManagerImpl;
-import org.example.demo.ticket.business.manager.TicketManagerImpl;
+import org.example.demo.ticket.business.impl.manager.ProjetManagerImpl;
+import org.example.demo.ticket.business.impl.manager.TicketManagerImpl;
 
 public interface ManagerFactory {
 

@@ -1,8 +1,8 @@
 package org.example.demo.ticket.webapp.listener;
 
 import org.example.demo.ticket.business.ManagerFactory;
-import org.example.demo.ticket.business.manager.ProjetManagerImpl;
-import org.example.demo.ticket.business.manager.TicketManagerImpl;
+import org.example.demo.ticket.business.impl.manager.ProjetManagerImpl;
+import org.example.demo.ticket.business.impl.manager.TicketManagerImpl;
 import org.example.demo.ticket.webapp.rest.resource.AbstractResource;
 
 import javax.servlet.ServletContextEvent;

@@ -1,5 +1,6 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.impl.manager;
 
+import org.example.demo.ticket.business.contract.manager.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 

@@ -1,9 +1,10 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.impl.manager;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.example.demo.ticket.business.contract.manager.TicketManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.bean.ticket.Bug;
 import org.example.demo.ticket.model.bean.ticket.Evolution;
