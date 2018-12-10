@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] pArgs) throws TechnicalException {
         try {
             if (pArgs.length < 1) {
-                throw new TechnicalException("Veuillez préciser le traitement à effectuer !");
+                throw new TechnicalException("Veuillez préciser le traitement à effectuer!");
             }
 
             String vTraitementId = pArgs[0];
