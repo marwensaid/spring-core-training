@@ -2,10 +2,15 @@ package org.example.demo.ticket.business;
 
 import org.example.demo.ticket.business.manager.ProjetManager;
 import org.example.demo.ticket.business.manager.TicketManager;
+import org.example.demo.ticket.model.bean.projet.Projet;
 
 public class ManagerFactory {
 
     private static final ManagerFactory INSTANCE = new ManagerFactory();
+
+    private ProjetManager projetManager;
+
+    private TicketManager ticketManager;
 
     public ManagerFactory() {
         super();
@@ -16,10 +21,18 @@ public class ManagerFactory {
     }
 
     public ProjetManager getProjetManager() {
-        return new ProjetManager();
+        return projetManager;
+    }
+
+    public void setProjetManager(ProjetManager pProjectManager) {
+        projetManager = pProjectManager;
     }
 
     public TicketManager getTicketManager() {
-        return new TicketManager();
+        return ticketManager;
+    }
+
+    public void setTicketManager(TicketManager pTicketManager) {
+        ticketManager = pTicketManager;
     }
 }
