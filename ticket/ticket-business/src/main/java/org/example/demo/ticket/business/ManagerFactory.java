@@ -2,9 +2,9 @@ package org.example.demo.ticket.business;
 
 import org.example.demo.ticket.business.manager.ProjetManager;
 import org.example.demo.ticket.business.manager.TicketManager;
-import org.example.demo.ticket.model.bean.projet.Projet;
 
-public class ManagerFactory {
+public class ManagerFactory implements ManagerFactoryImpl {
+
 
     private static final ManagerFactory INSTANCE = new ManagerFactory();
 
@@ -12,7 +12,7 @@ public class ManagerFactory {
 
     private TicketManager ticketManager;
 
-    public ManagerFactory() {
+    private ManagerFactory() {
         super();
     }
 
@@ -20,18 +20,22 @@ public class ManagerFactory {
         return ManagerFactory.INSTANCE;
     }
 
+    @Override
     public ProjetManager getProjetManager() {
         return projetManager;
     }
 
+    @Override
     public void setProjetManager(ProjetManager pProjectManager) {
         projetManager = pProjectManager;
     }
 
+    @Override
     public TicketManager getTicketManager() {
         return ticketManager;
     }
 
+    @Override
     public void setTicketManager(TicketManager pTicketManager) {
         ticketManager = pTicketManager;
     }
