@@ -9,7 +9,7 @@ public final class ManagerFactory {
     /**
      * Constructeur
      */
-    private ManagerFactory() {
+    public ManagerFactory() {
         super();
     }
 
