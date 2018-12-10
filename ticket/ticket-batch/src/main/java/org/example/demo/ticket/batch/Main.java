@@ -5,6 +5,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 /**
  * Classe Principale de lancement des Batches.
@@ -24,7 +27,18 @@ public class Main {
      * @throws TechnicalException sur erreur technique
      */
     public static void main(String[] pArgs) throws TechnicalException {
-        try {
+
+        ApplicationContext vApplicationContext = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
+
+        //Il est possible de récupérer un bean dans ce contexte
+        ManagerFactory vManagerFactory = vApplicationContext.getBean("managerFactory", ManagerFactory.class);
+
+        //suite de l'impl des batches....
+
+
+        
+
+        /*try {
             if (pArgs.length < 1) {
                 throw new TechnicalException("Veuillez préciser le traitement à effectuer !");
             }
@@ -39,6 +53,6 @@ public class Main {
         } catch (Throwable vThrowable) {
             LOGGER.error(vThrowable);
             System.exit(1);
-        }
+        }*/
     }
 }
