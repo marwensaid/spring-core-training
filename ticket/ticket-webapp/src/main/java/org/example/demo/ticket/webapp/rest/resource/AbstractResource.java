@@ -13,6 +13,6 @@ public class AbstractResource
 
     public static void setManagerFactory(ManagerFactoryImpl managerFactory)
     {
-        this.managerFactory = managerFactory;
+        AbstractResource.managerFactory = managerFactory;
     }
 }

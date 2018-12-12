@@ -11,6 +11,7 @@ import org.example.demo.ticket.model.bean.ticket.Evolution;
 import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -18,6 +19,7 @@ import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
  *
  * @author lgu
  */
+@Component("ticketManager")
 public class TicketManagerImpl implements TicketManager
 {
 
