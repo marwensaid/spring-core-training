@@ -1,4 +1,9 @@
 package org.example.demo.ticket.consumer.Impl;
 
-public class TicketDaoImpl {
+import org.example.demo.ticket.consumer.contract.TicketDao;
+
+import javax.inject.Named;
+
+@Named
+public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
 }
