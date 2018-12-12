@@ -5,34 +5,15 @@
        xsi:schemaLocation="
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
-
     <!-- ===== Déclaration des Managers ===== -->
-
-
-
     <bean id="ProjetManager" class="org.example.demo.ticket.business.contract.ProjetManager" abstract="true">
-
-
     </bean>
-
-
-    <bean class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl" id="ticketManager">
-
-
-
-    </bean>
-
+    <bean class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl" id="ticketManager"/>
     <!-- ===== ManagerFactory ===== -->
-
-
-
     <bean class="org.example.demo.ticket.business.manager.impl.ManagerFactoryImpl" id="managerFactory">
-
-
         <property name="ticketManager" ref="ticketManager"/>
-
     </bean>
-
+    <bean id="dataSourceTicket" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_TICKET"/>
+    </bean>
 </beans>
