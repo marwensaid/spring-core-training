@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- ==== Déclaration des DAO ==== -->
+    <bean id="projetManaer" class="org.example.demo.ticket.business.manager.impl.ProjetManagerImpl">
+        <property name="daoFactory" ref="daoFactory"/>
+    </bean>
+    <bean id="ticketManager" class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl">
+        <property name="daoFactory" ref="daoFactory"/>
+    </bean>
+
+
+    <!-- ==== ManagerFactory ==== -->
+    <bean id="projetManager" class="org.example.demo.ticket.business.manager.impl.ProjetManagerImpl">
+        <property name="projetMananger" ref="projetManager"/>
+        <property name="ticketManager" ref="ticketManager"
+    </bean>
+
+
+
+</beans>
