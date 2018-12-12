@@ -6,11 +6,11 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- ===== Déclaration des DAO ===== -->
-    <bean id="projetDao" class="org.example.demo.ticket.consumer.Impl.ProjetDaoImpl"/>
-    <bean id="ticketDao" class="org.example.demo.ticket.consumer.Impl.TicketDaoImpl"/>
+    <bean id="projetDao" class="org.example.demo.ticket.consumer.Impl.dao.ProjetDaoImpl"/>
+    <bean id="ticketDao" class="org.example.demo.ticket.consumer.Impl.dao.TicketDaoImpl"/>
 
     <!-- ===== DaoFactory ===== -->
-<!--    <bean id="daoFactory" class="org.example.demo.ticket.business.contract.DaoFactor">
+    <!--<bean id="daoFactory" class="org.example.demo.ticket.consumer.Impl.dao.DaoFactoryImpl">
         <property name="projetDao" ref="projetDao"/>
         <property name="ticketDao" ref="ticketDao"/>
     </bean>-->
