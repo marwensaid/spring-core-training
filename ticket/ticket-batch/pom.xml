@@ -39,6 +39,12 @@
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
 
+        <!--Driver JDBC-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
 
         <!-- ===== Bibliothèques tierces ===== -->
 
