@@ -15,11 +15,11 @@ public interface ManagerFactory {
         return ManagerFactoryImpl.INSTANCE;
     }
 
-    ProjetManagerImpl getProjetManager();
+    ProjetManager getProjetManager();
 
     void setProjetManager(ProjetManagerImpl pProjetManager);
 
-    TicketManagerImpl getTicketManager();
+    TicketManager getTicketManager();
 
     void setTicketManager(TicketManagerImpl pTicketManager);
 }

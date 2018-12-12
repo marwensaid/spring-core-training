@@ -1,9 +1,18 @@
 package org.example.demo.ticket.business.manager.impl;
 
-public class ManagerFactoryImpl implements org.example.demo.ticket.business.manager.myInterface.ManagerFactory {
+import org.example.demo.ticket.business.manager.myInterface.ManagerFactory;
+import org.example.demo.ticket.business.manager.myInterface.ProjetManager;
+import org.example.demo.ticket.business.manager.myInterface.TicketManager;
 
-    private ProjetManagerImpl projetManager;
-    private TicketManagerImpl ticketManager;
+import javax.inject.Inject;
+
+public class ManagerFactoryImpl implements ManagerFactory {
+
+    @Inject
+    private ProjetManager projetManager;
+
+    @Inject
+    private TicketManager ticketManager;
 
     /**
      * Constructeur de la classe
@@ -17,7 +26,7 @@ public class ManagerFactoryImpl implements org.example.demo.ticket.business.mana
      * @return
      */
     @Override
-    public ProjetManagerImpl getProjetManager(){
+    public ProjetManager getProjetManager(){
         return projetManager;
     }
 
@@ -35,7 +44,7 @@ public class ManagerFactoryImpl implements org.example.demo.ticket.business.mana
      * @return
      */
     @Override
-    public TicketManagerImpl getTicketManager(){
+    public TicketManager getTicketManager(){
         return ticketManager;
     }
 
