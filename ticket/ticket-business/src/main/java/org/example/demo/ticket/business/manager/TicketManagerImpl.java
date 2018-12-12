@@ -17,7 +17,7 @@ import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
 /**
  * Manager des beans du package Ticket.
  *
- * @author lgu
+ * @author lguk
  */
 @Named("ticketManager")
 public class TicketManagerImpl implements TicketManager {
