@@ -3,11 +3,11 @@ package org.example.demo.ticket.batch;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.example.demo.ticket.batch.bootstrap.SpringConfiguration;
 import org.example.demo.ticket.business.contract.ManagerFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Classe Principale de lancement des Batches.
@@ -28,7 +28,7 @@ public class Main {
      */
     public static void main(String[] pArgs) throws TechnicalException {
         ApplicationContext vApplicationContext
-                = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
+                = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 
         // Il est possible de récupérer un bean dans ce contexte :
         ManagerFactory vManagerFactory
