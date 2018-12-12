@@ -1,7 +1,7 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business;
 
-import org.example.demo.ticket.business.manager.contract.manager.ProjetManager;
-import org.example.demo.ticket.business.manager.contract.manager.TicketManager;
+import org.example.demo.ticket.business.contract.manager.TicketManager;
+import org.example.demo.ticket.business.contract.manager.ProjetManager;
 
 public interface ManagerFactory {
     ProjetManager getProjetManager();

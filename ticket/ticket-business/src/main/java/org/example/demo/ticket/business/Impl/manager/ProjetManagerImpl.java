@@ -1,12 +1,14 @@
-package org.example.demo.ticket.business.manager.Impl.manager;
+package org.example.demo.ticket.business.Impl.manager;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.demo.ticket.business.manager.contract.manager.ProjetManager;
+import org.example.demo.ticket.business.contract.manager.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
+
+import javax.inject.Named;
 
 
 /**
@@ -14,6 +16,7 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  *
  * @author lgu
  */
+@Named("projetManager")
 public class ProjetManagerImpl implements ProjetManager {
 
     /**
