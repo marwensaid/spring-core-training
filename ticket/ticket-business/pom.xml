@@ -41,12 +41,20 @@
 
 
         <!-- ===== Bibliothèques tierces ===== -->
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
 
         <!-- ===== Tests ===== -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.hk2.external</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>2.5.0-b60</version>
         </dependency>
     </dependencies>
 </project>

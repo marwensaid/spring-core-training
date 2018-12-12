@@ -1,11 +1,15 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.manager.impl;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.example.demo.ticket.business.dao.DaoFactory;
+import org.example.demo.ticket.business.contract.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
+
+import javax.inject.Named;
 
 
 /**
@@ -13,7 +17,10 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  *
  * @author lgu
  */
-public class ProjetManager {
+@Named("projetManager")
+public class ProjetManagerImpl implements ProjetManager {
+
+    private DaoFactory daoFactory;
 
     /**
      * Renvoie le projet demandé
@@ -22,8 +29,9 @@ public class ProjetManager {
      * @return Le {@link Projet}
      * @throws NotFoundException Si le projet n'est pas trouvé
      */
+    @Override
     public Projet getProjet(Integer pId) throws NotFoundException {
-        // Je n'ai pas encore codé la DAO
+        // Je n'ai pas encore codé la dao
         // Je mets juste un code temporaire pour commencer le cours...
         if (pId < 1) {
             throw new NotFoundException("Projet non trouvé : ID=" + pId);
@@ -39,8 +47,9 @@ public class ProjetManager {
      *
      * @return List
      */
+    @Override
     public List<Projet> getListProjet() {
-        // Je n'ai pas encore codé la DAO
+        // Je n'ai pas encore codé la dao
         // Je mets juste un code temporaire pour commencer le cours...
         List<Projet> vList = new ArrayList<>();
         for (int vI = 0; vI < 9; vI++) {
@@ -49,5 +58,13 @@ public class ProjetManager {
             vList.add(vProjet);
         }
         return vList;
+    }
+
+    public void setDaoFactory(DaoFactory daoFactory) {
+        this.daoFactory = daoFactory;
+    }
+
+    public DaoFactory getDaoFactory() {
+        return daoFactory;
     }
 }
