@@ -1,9 +1,13 @@
 package org.example.demo.ticket.batch;
 
 
+import org.example.demo.ticket.batch.bootstrap.SpringConfiguration;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.example.demo.ticket.business.IManagerFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 /**
@@ -24,6 +28,9 @@ public class Main {
      * @throws TechnicalException sur erreur technique
      */
     public static void main(String[] pArgs) throws TechnicalException {
+        ApplicationContext vApplicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+
+        IManagerFactory vManagerFactory = vApplicationContext.getBean("managerFactoryImpl", IManagerFactory.class);
         try {
             if (pArgs.length < 1) {
                 throw new TechnicalException("Veuillez préciser le traitement à effectuer !");
