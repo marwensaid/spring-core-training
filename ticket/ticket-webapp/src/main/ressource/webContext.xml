@@ -8,6 +8,9 @@
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="org.example.demo.ticket.webapp.rest.resource.AbstractRessource"/>
     </bean>
+    <bean id="dataSourceTicket" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_TICKET"/>
+    </bean>
 
     <!-- Prend en compte la configuration des injections (@Inject...) -->
     <context:annotation-config/>
