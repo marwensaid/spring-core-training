@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context>
+    <resource name="jdbc/DB_TICKET"
+              auth="container"
+              type="javax.sql.Datasource"
+
+              url="jdbc:postgresql://localhost:5432/db_ticket"
+              driverClassName="org.postgresql.Driver"
+              username="ticket"
+              password="ticket"
+              defaultAutoCommit="false"
+              defaulttransactionIsolation="READ_COMMITTED"
+
+              initialSize="1"
+              maxTotal="30"
+              maxIdle="10"
+              maxWaitMillis="60000"
+              minIdle="1"
+              removeAbandonnedTimeout="60"
+              removeAbandonnedOnBorrow="true"
+              logAbandonned="true"
+              minEvictbleIdleTimeMillis="30000"
+              validationQuery="SELECT 1"
+              testWhileIdle="true"
+              testOnBorrow="true"
+    />
+</context>
