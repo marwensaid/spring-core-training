@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan("org.example.demo.ticket")
-@ImportResource("classpath:/applicationContext.xml")
+@ImportResource("classpath:/org/example/demo/ticket/webapp/webappContext.xml")
 public class SpringConfiguration {
 
 }
