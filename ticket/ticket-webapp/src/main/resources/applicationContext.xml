@@ -8,6 +8,9 @@
     <!-- ===== Déclaration des Managers ===== -->
     <bean id="ProjetManager" class="org.example.demo.ticket.business.contract.ProjetManager" abstract="true">
     </bean>
+    <bean id="dataSourceTicket" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_TICKET"/>
+    </bean>
     <bean class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl" id="ticketManager">
     </bean>
     <!-- ===== ManagerFactory ===== -->

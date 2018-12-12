@@ -15,7 +15,6 @@ public class ManagerFactoryImpl implements ManagerFactory {
 
     public ManagerFactoryImpl(){
         super();
-        //test
     }
 
     @Override
