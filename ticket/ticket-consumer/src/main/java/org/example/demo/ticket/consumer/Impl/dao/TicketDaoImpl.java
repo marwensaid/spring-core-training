@@ -3,9 +3,11 @@ package org.example.demo.ticket.consumer.Impl.dao;
 import org.example.demo.ticket.consumer.contract.dao.TicketDao;
 import org.example.demo.ticket.model.bean.ticket.TicketStatut;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.SqlParameterValue;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -14,6 +16,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Named
 public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
@@ -70,5 +73,20 @@ public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
 
         JdbcTemplate vJdbcTemplate = new JdbcTemplate(getDataSource());
         vJdbcTemplate.update(vSQL, vParams);
+    }
+
+    public void insertTicketStatut(TicketStatut pTicketStatut) {
+        String vSQL = "INSERT INTO statut (id, libelle) VALUES (:id, :libelle)";
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+
+        BeanPropertySqlParameterSource vParams = new BeanPropertySqlParameterSource(pTicketStatut);
+        vParams.registerSqlType("id", Types.INTEGER);
+        vParams.registerSqlType("libelle", Types.VARCHAR);
+
+        try {
+            vJdbcTemplate.update(vSQL, vParams);
+        } catch (DuplicateKeyException vEx) {
+            System.out.println(vEx.getMessage());
+        }
     }
 }
