@@ -20,4 +20,7 @@
         <property name="projetManager" ref="projetManager"/>
         <property name="ticketManager" ref="ticketManager"/>
     </bean>
+    <bean id="dataSourceTicket" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_TICKET"/>
+    </bean>
 </beans>

@@ -38,6 +38,15 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.1.1</version>
+        </dependency>
 
 
         <!-- ===== Bibliothèques tierces ===== -->
