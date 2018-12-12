@@ -24,4 +24,9 @@
         <property name="targetMethod" value="setManagerFactory"/>
         <property name="arguments" value="managerFactory"/>
     </bean>
+
+    <bean id="dataSourceTicketConfiguration"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="file:${application.home}/conf/db-ticket.properties"
+    </bean>
 </beans>
