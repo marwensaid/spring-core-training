@@ -1,15 +1,16 @@
 package org.example.demo.ticket.webapp.rest.resource;
 
 
-import org.example.demo.ticket.business.contract.ManagerFactory;
+import org.example.demo.ticket.business.manager.myInterface.ManagerFactory;
 
 public abstract class AbstractResource {
+
     private static ManagerFactory managerFactory;
 
-    protected static ManagerFactory getManagerFactory() {
+    protected static ManagerFactory managerFactory() {
         return managerFactory;
     }
-    public static void setManagerFactory(ManagerFactory pManagerFactory) {
+    public static void setManagerFactory(ManagerFactory pManagerFactory){
         managerFactory = pManagerFactory;
     }
 }

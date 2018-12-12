@@ -4,7 +4,7 @@ package org.example.demo.ticket.business.manager.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.demo.ticket.business.contract.TicketManager;
+import org.example.demo.ticket.business.manager.myInterface.TicketManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.bean.ticket.Bug;
 import org.example.demo.ticket.model.bean.ticket.Evolution;

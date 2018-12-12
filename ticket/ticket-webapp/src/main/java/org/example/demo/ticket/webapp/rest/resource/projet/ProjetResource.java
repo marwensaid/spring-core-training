@@ -7,8 +7,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.example.demo.ticket.business.contract.ManagerFactory;
 import org.example.demo.ticket.business.manager.impl.ProjetManagerImpl;
+import org.example.demo.ticket.business.manager.myInterface.ManagerFactory;
+import org.example.demo.ticket.business.manager.myInterface.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
@@ -23,6 +24,7 @@ import org.example.demo.ticket.model.exception.NotFoundException;
 public class ProjetResource {
 
     private ManagerFactory managerFactory = ManagerFactory.getInstance();
+
     /**
      * Renvoie le {@link Projet} d'identifiant {@code pId}
      *
@@ -33,7 +35,7 @@ public class ProjetResource {
     @GET
     @Path("{id}")
     public Projet get(@PathParam("id") Integer pId) throws NotFoundException {
-        ProjetManagerImpl vProjetManager = new ProjetManagerImpl();
+        ProjetManager vProjetManager = new ProjetManagerImpl();
         Projet vProjet = vProjetManager.getProjet(pId);
         return vProjet;
     }
@@ -46,7 +48,7 @@ public class ProjetResource {
      */
     @GET
     public List<Projet> get() {
-        ProjetManagerImpl vProjetManager = new ProjetManagerImpl();
+        ProjetManager vProjetManager = new ProjetManagerImpl();
         List<Projet> vListProjet = vProjetManager.getListProjet();
         return vListProjet;
     }

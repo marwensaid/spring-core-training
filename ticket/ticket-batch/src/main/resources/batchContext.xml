@@ -10,7 +10,8 @@
     <bean id="ticketManager" class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl"/>
 
     <!-- ===== ManagerFactory ===== -->
-    <bean id="managerFactory" class="org.example.demo.ticket.business.contract.ManagerFactory" abstract="true">
+    <bean id="managerFactory" class="org.example.demo.ticket.business.manager.myInterface.ManagerFactory"
+          abstract="true">
         <property name="projetManager" ref="projetManager"/>
         <property name="ticketManager" ref="ticketManager"/>
     </bean>

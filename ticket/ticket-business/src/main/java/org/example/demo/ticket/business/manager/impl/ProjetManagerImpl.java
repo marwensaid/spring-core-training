@@ -4,9 +4,11 @@ package org.example.demo.ticket.business.manager.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.demo.ticket.business.contract.ProjetManager;
+import org.example.demo.ticket.business.manager.myInterface.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
+
+import javax.inject.Named;
 
 
 /**
@@ -14,6 +16,8 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  *
  * @author lgu
  */
+
+@Named("projetManager")
 public class ProjetManagerImpl implements ProjetManager {
 
     /**
