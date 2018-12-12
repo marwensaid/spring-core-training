@@ -28,7 +28,7 @@ public class Main {
      */
     public static void main(String[] pArgs) throws TechnicalException {
         ApplicationContext vApplicationContext
-                = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
+                = new ClassPathXmlApplicationContext("classpath:/bootstrapContext.xml");
 
         // Il est possible de récupérer un bean dans ce contexte :
         ManagerFactory vManagerFactory
