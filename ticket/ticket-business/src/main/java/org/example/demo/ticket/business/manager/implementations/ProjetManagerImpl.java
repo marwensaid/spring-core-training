@@ -1,9 +1,10 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.manager.implementations;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.example.demo.ticket.business.manager.interfaces.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
@@ -13,7 +14,7 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  *
  * @author lgu
  */
-public class ProjetManager {
+public class ProjetManagerImpl implements ProjetManager {
 
     /**
      * Renvoie le projet demandé
