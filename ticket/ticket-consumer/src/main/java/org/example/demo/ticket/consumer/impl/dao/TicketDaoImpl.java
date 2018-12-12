@@ -1,5 +1,7 @@
 package org.example.demo.ticket.consumer.impl.dao;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.example.demo.ticket.consumer.contract.impl.dao.TicketDao;
 
 import javax.inject.Named;
@@ -23,6 +25,8 @@ import java.util.List;
 
 @Named
 public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
+
+    private static final Log LOGGER = LogFactory.getLog(TicketDaoImpl.class);
 
     @Override
     public int getCountTicket(RechercheTicket pRechercheTicket) {
@@ -143,7 +147,7 @@ public class TicketDaoImpl extends AbstractDaoImpl implements TicketDao {
         try {
             vJdbcTemplate.update(vSQL, vParams);
         } catch (DuplicateKeyException vEx) {
-            //LOGGER.error("Le TicketStatut existe déjà ! id=" + pTicketStatut.getId(), vEx);
+            LOGGER.error("Le TicketStatut existe déjà ! id=" + pTicketStatut.getId(), vEx);
         }
     }
 }
