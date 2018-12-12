@@ -44,7 +44,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <jersey.version>2.26</jersey.version>
-        <spring.version>4.3.11.RELEASE</spring.version>
+        <spring-version>4.3.11.RELEASE</spring-version>
     </properties>
 
 
@@ -141,18 +141,6 @@
                 <artifactId>javax.ws.rs-api</artifactId>
                 <version>2.1</version>
             </dependency>
-
-            <!-- JSR-250 -->
-            <dependency>
-                <groupId>javax.annotation</groupId>
-                <artifactId>javax.annotation-api</artifactId>
-                <version>1.2</version>
-            <!-- JSR-330 -->
-            <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>1</version>
-
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
                 <artifactId>jersey-bom</artifactId>
@@ -160,6 +148,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
 
             <dependency>
                 <groupId>commons-logging</groupId>
@@ -178,13 +167,13 @@
                 <version>2.6.2</version>
                 <scope>runtime</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
+                <version>${spring-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
