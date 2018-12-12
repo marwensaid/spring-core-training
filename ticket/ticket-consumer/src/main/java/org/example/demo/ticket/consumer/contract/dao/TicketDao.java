@@ -12,4 +12,9 @@ public interface TicketDao {
     int getCountTicket(RechercheTicket pRechercheTicket);
     List<TicketStatut> getListStatut();
     void updateTicketStatut(TicketStatut pTicketStatut);
+    void updateTicketStatut1(TicketStatut pTicketStatut);
+    void updateTicketStatut2(TicketStatut pTicketStatut);
+    void updateTicketStatut3(TicketStatut pTicketStatut);
+    void updateTicketStatut4(TicketStatut pTicketStatut);
+    void insertTicketStatut(TicketStatut pTicketStatut);
 }
