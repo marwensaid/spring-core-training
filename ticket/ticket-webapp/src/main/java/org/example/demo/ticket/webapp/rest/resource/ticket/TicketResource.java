@@ -8,11 +8,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.example.demo.ticket.business.impl.manager.TicketManagerImpl;
+import org.example.demo.ticket.business.manager.impl.TicketManagerImpl;
 import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
-import org.example.demo.ticket.webapp.rest.resource.AbstractResource;
 
 
 /**
@@ -22,7 +21,7 @@ import org.example.demo.ticket.webapp.rest.resource.AbstractResource;
  */
 @Path("/tickets")
 @Produces(MediaType.APPLICATION_JSON)
-public class TicketResource extends AbstractResource {
+public class TicketResource {
 
 
     /**
@@ -35,7 +34,8 @@ public class TicketResource extends AbstractResource {
     @GET
     @Path("{numero}")
     public Ticket get(@PathParam("numero") Long pNumero) throws NotFoundException {
-        Ticket vTicket = getManagerFactory().getTicketManager().getTicket(pNumero);
+        TicketManagerImpl vTicketManager = new TicketManagerImpl();
+        Ticket vTicket = vTicketManager.getTicket(pNumero);
         return vTicket;
     }
 
