@@ -1,13 +1,13 @@
 package org.example.demo.ticket.batch;
 
-
+import org.example.demo.ticket.batch.bootstrap.SpringConfiguration;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.example.demo.ticket.batch.bootstrap.SpringConfiguration;
-import org.example.demo.ticket.business.contract.ManagerFactory;
+import org.example.demo.ticket.business.interfaces.ManagerFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 /**
  * Classe Principale de lancement des Batches.
@@ -26,13 +26,10 @@ public class Main {
      * @param pArgs the input arguments
      * @throws TechnicalException sur erreur technique
      */
-    public static void main(String[] pArgs) throws TechnicalException {
-        ApplicationContext vApplicationContext
-                = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-
-        // Il est possible de récupérer un bean dans ce contexte :
-        ManagerFactory vManagerFactory
-                = vApplicationContext.getBean("managerFactory", ManagerFactory.class);
+    public static void main(String[] pArgs) throws TechnicalException
+    {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+        ManagerFactory managerFactory = applicationContext.getBean("managerFactory", ManagerFactory.class);
         try {
             if (pArgs.length < 1) {
                 throw new TechnicalException("Veuillez préciser le traitement à effectuer !");

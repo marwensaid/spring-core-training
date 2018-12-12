@@ -3,16 +3,21 @@
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <!-- ... -->
 
     <display-name>Ticket</display-name>
 
+    <resource-ref>
+        <res-ref-name>jdbc/DB_TICKET</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>org.example.demo.ticket.webapp.bootstrap.SpringConfiguration</param-value>
+        <param-value>classpath:/bootstrapContext.xml</param-value>
     </context-param>
     <context-param>
         <param-name>contextClass</param-name>
