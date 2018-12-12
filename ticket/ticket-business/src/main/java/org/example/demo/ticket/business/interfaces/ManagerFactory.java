@@ -1,7 +1,4 @@
-package org.example.demo.ticket.business.manager.interfaces;
-
-import org.example.demo.ticket.business.manager.implementations.TicketManagerImpl;
-import org.example.demo.ticket.model.bean.ticket.Ticket;
+package org.example.demo.ticket.business.interfaces;
 
 public interface ManagerFactory
 {

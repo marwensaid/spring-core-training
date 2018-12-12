@@ -1,4 +1,4 @@
-package org.example.demo.ticket.business.manager.interfaces;
+package org.example.demo.ticket.business.interfaces;
 
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;

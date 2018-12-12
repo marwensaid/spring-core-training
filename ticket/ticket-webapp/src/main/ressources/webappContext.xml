@@ -11,10 +11,10 @@
     <context:annotation-config/>
     <context:component-scan base-package="org.example.demo.ticket"/>
 
-    <bean id="projetManager" class="org.example.demo.ticket.business.manager.implementations.ProjetManagerImpl"/>
-    <bean id="ticketManager" class="org.example.demo.ticket.business.manager.implementations.TicketManagerImpl"/>
+    <bean id="projetManager" class="org.example.demo.ticket.business.implementations.ProjetManagerImpl"/>
+    <bean id="ticketManager" class="org.example.demo.ticket.business.implementations.TicketManagerImpl"/>
 
-    <bean id="managerFactory" class="org.example.demo.ticket.business.manager.interfaces.ManagerFactory">
+    <bean id="managerFactory" class="org.example.demo.ticket.business.interfaces.ManagerFactory">
         <property name="projetManager" ref="projetManager"/>
         <property name="ticketManager" ref="ticketManager"/>
     </bean>

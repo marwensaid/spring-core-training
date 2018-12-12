@@ -8,9 +8,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.example.demo.ticket.business.manager.implementations.TicketManagerImpl;
-import org.example.demo.ticket.business.manager.interfaces.ManagerFactory;
-import org.example.demo.ticket.business.manager.interfaces.TicketManager;
+import org.example.demo.ticket.business.implementations.TicketManagerImpl;
+import org.example.demo.ticket.business.interfaces.ManagerFactory;
+import org.example.demo.ticket.business.interfaces.TicketManager;
 import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;

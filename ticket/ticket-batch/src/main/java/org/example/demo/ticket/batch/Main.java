@@ -3,7 +3,7 @@ package org.example.demo.ticket.batch;
 import org.example.demo.ticket.batch.bootstrap.SpringConfiguration;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.example.demo.ticket.business.manager.interfaces.ManagerFactory;
+import org.example.demo.ticket.business.interfaces.ManagerFactory;
 import org.example.demo.ticket.model.exception.TechnicalException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

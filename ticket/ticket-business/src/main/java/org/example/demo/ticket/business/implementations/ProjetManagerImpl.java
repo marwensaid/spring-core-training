@@ -1,10 +1,10 @@
-package org.example.demo.ticket.business.manager.implementations;
+package org.example.demo.ticket.business.implementations;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.example.demo.ticket.business.manager.interfaces.ProjetManager;
+import org.example.demo.ticket.business.interfaces.ProjetManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.springframework.stereotype.Component;
