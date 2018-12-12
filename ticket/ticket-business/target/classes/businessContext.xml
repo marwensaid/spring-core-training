@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="
@@ -6,11 +7,18 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- ===== Déclaration des Managers ===== -->
-    <bean id="projetManager" class="org.example.demo.ticket.business.manager.impl.ProjetManagerImpl"/>
-    <bean id="ticketManager" class="org.example.demo.ticket.business.manager.impl.TicketManagerImpl"/>
+
+    <bean id="projetManager" class="org.example.demo.ticket.business.impl.manager.ProjetManagerImpl">
+        <property name="daoFactory" ref="daoFactory" />
+    </bean>
+    <bean id="ticketManager" class="org.example.demo.ticket.business.impl.manager.TicketManagerImpl">
+        <property name="daoFactory" ref="daoFactory" />
+    </bean>
+
 
     <!-- ===== ManagerFactory ===== -->
-    <bean id="managerFactory" class="org.example.demo.ticket.business.contract.ManagerFactory" abstract="true">
+
+    <bean id="managerFactory" class="org.example.demo.ticket.business.impl.ManagerFactoryImpl">
         <property name="projetManager" ref="projetManager"/>
         <property name="ticketManager" ref="ticketManager"/>
     </bean>

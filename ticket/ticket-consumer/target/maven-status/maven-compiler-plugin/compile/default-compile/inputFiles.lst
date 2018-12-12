@@ -1,6 +1,7 @@
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\DaoFactory.java
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\DaoFactoryImpl.java
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\TicketDaoImpl.java
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\ProjetDaoImpl.java
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\ProjetDao.java
-D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\TicketDao.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\dao\ProjetDaoImpl.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\dao\ProjetDao.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\dao\DaoFactoryImpl.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\dao\TicketDao.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\dao\TicketDaoImpl.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\contrat\dao\DaoFactory.java
+D:\Bureau\spring-core-training\ticket\ticket-consumer\src\main\java\org\example\demo\ticket\consumer\impl\dao\AbstractDaoImpl.java

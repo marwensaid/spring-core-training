@@ -1,6 +1,6 @@
-org\example\demo\ticket\business\contract\TicketManager.class
 org\example\demo\ticket\business\contract\ManagerFactory.class
 org\example\demo\ticket\business\manager\impl\TicketManagerImpl.class
+org\example\demo\ticket\business\contract\TicketManager.class
 org\example\demo\ticket\business\contract\ProjetManager.class
 org\example\demo\ticket\business\manager\impl\ManagerFactoryImpl.class
 org\example\demo\ticket\business\manager\impl\ProjetManagerImpl.class
