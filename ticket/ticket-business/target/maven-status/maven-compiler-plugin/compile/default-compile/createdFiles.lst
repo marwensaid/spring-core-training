@@ -1,0 +1,6 @@
+org/example/demo/ticket/business/manager/myInterface/TicketManager.class
+org/example/demo/ticket/business/manager/impl/ProjetManagerImpl.class
+org/example/demo/ticket/business/manager/myInterface/ProjetManager.class
+org/example/demo/ticket/business/manager/impl/TicketManagerImpl.class
+org/example/demo/ticket/business/manager/impl/ManagerFactoryImpl.class
+org/example/demo/ticket/business/manager/myInterface/ManagerFactory.class

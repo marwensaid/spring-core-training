@@ -1,0 +1,10 @@
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/contract/dao/DaoFactory.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/rowmapper/ticket/TicketStatutRM.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/dao/AbstractDaoImpl.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/dao/TicketDaoImpl.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/rowmapper/ticket/TicketRM.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/contract/dao/ProjetDao.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/dao/DaoFactoryImpl.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/dao/ProjetDaoImpl.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/Impl/rowmapper/projet/ProjetRM.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-consumer/src/main/java/org/example/demo/ticket/consumer/contract/dao/TicketDao.java

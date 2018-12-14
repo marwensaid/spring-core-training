@@ -1,0 +1,8 @@
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/bootstrap/SpringConfiguration.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/listener/DependencyInjectionListener.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/resource/projet/ProjetResource.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/provider/mapper/exception/NotFoundExceptionMapper.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/provider/filter/JsonCharsetFilter.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/resource/ticket/TicketResource.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/RestApplication.java
+/Users/jordone/Documents/spring-core-training/ticket/ticket-webapp/src/main/java/org/example/demo/ticket/webapp/rest/resource/AbstractResource.java
