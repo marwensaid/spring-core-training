@@ -3,9 +3,13 @@ package org.example.demo.ticket.business.impl.manager;
 
 import org.example.demo.ticket.business.contract.ManagerFactory;
 
+import javax.inject.Inject;
+
 public class ManagerFactoryImpl implements ManagerFactory {
 
+    @Inject
     private ProjetManagerImpl projetManager;
+    @Inject
     private TicketManagerImpl ticketManager;
 
     public ManagerFactoryImpl(){
